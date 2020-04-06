@@ -4,6 +4,7 @@ langChooseOpt2="(2) 挂载EFI分区并打开"
 langChooseOpt3="(3) 编译kext到桌面"
 langChooseOpt4="(4) 开启HIDPI"
 langChooseOpt5="(5) 睡眠唤醒日志查看"
+langChooseOpt6="(6) 安装oh_my_zsh"
 langChooseOpt="(0) 任意键退出"
 
 function uploadEFI(){
@@ -23,8 +24,8 @@ function updateCache(){
 	sudo kextcache -i /
 }
 
-function start(){
 
+function start(){
 	echo ""
 	echo "不知道功能请退出"
 	echo ""
@@ -35,7 +36,9 @@ function start(){
 	echo ${langChooseOpt3}
 	echo ${langChooseOpt4}
 	echo ${langChooseOpt5}
+	echo ${langChooseOpt6}
 	echo ""
+	
 
 	read -p "${langInputChoice}[1~5]: " input 
 	case ${input} in
@@ -43,13 +46,13 @@ function start(){
 		;;
 		2) uploadEFI
 		;;
-		3) ./compileKext.sh
+		3) ~/myBash/compileKext.sh
 		;;
-		4) ./hidpi/hidpi.sh
+		4) ~/myBash/file/hidpi/hidpi.sh
 		;;
 		5) log show --last 1d | grep "Wake reason"
 		;;
-		*)
+		*) 
 		echo "退出"
 		exit 0
 		;;
