@@ -20,13 +20,7 @@ macOS 的 DPI 机制和 Windows 下不一样，比如 1080p 的屏幕在 Windows
 
 ## 使用方法
 
-在终端输入以下命令回车即可
-
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"
-```
-
-![运行](./img/run-zh.jpg)
+把文件夹内`hidpi.sh`拖到终端运行无特殊情况选择`1`
 
 ## 恢复
 
@@ -41,7 +35,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/mast
 这里有两种方式进行关闭，建议选第一种
 
 1. 快捷恢复
-    
+   
 ```bash
 ls /Volumes/
 cd /Volumes/你的系统盘/System/Library/Displays/Contents/Resources/Overrides/HIDPI
