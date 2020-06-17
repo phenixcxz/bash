@@ -26,3 +26,4 @@ git clone https://github.com/phenixcxz/myBash.git ~/myBash
 4. 开启HIDPI
 5. 查看睡眠唤醒事件
 
+test
