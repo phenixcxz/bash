@@ -8,10 +8,13 @@ langChooseOpt6="(6) 安装oh_my_zsh"
 langChooseOpt="(0) 任意键退出"
 
 function uploadEFI(){
-	sudo mkdir /Volumes/EFI
+	sudo mkdir /Volumes/EFI1
+	sudo mkdir /Volumes/EFI2
 ##	sudo diskutil mount /dev/disk0s1 
-	sudo mount -t msdos /dev/disk0s1 /Volumes/EFI
-	open /Volumes/EFI/
+	sudo mount -t msdos /dev/disk0s1 /Volumes/EFI1
+	sudo mount -t msdos /dev/disk0s2 /Volumes/EFI2
+
+	open /Volumes/EFI2/
 }
 
 function updateCache(){
